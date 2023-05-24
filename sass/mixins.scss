@@ -1,0 +1,30 @@
+@use 'vars';
+
+%flexbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    flex-direction: inherit;
+}
+
+%fillspace {
+    width: 100%;
+    height: 100%;
+}
+
+@mixin theme($primary-color: DarkGray) {
+  background: $primary-color;
+  box-shadow: 0 0 1px rgba($primary-color, .25);
+  color: #fff;
+}
+
+.info {
+  @include theme;
+}
+.alert {
+  @include theme($primary-color: DarkRed);
+}
+.success {
+  @include theme($primary-color: DarkGreen);
+}

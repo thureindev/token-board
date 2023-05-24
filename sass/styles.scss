@@ -1,0 +1,73 @@
+@use 'mixins';
+
+.wrapper, .wrapper * {
+    @extend %flexbox;
+    @extend %fillspace;
+    
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.wrapper {
+    // background-color: cyan;
+}
+
+@media screen and (orientation: portrait) {
+    .wrapper {
+        flex-direction: column-reverse;
+    }
+}
+
+.split-screen {
+
+    flex-direction: column;
+
+    tr {
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+
+    th, td {
+        height: 10vh;
+
+        @media screen and (orientation: portrait) {
+            height: 7vh;
+        }
+
+        border-bottom: 1px solid black;
+    }
+    
+    th {
+        background-color: gainsboro;
+    }
+
+    .rowspan-2 {
+        @media screen and (orientation: landscape) {
+            height: 20vh;
+        }
+        font-size: 1.3em;
+    }
+}
+
+.list-view {
+
+    width: 60vw;
+
+    // background-color: red;
+}
+
+.focus-view {
+
+    width: 40vw;
+
+    // background-color: lime;
+}
+
+@media screen and (orientation: portrait) {
+    .list-view, .focus-view {
+        width: 100vw;
+    }
+}
+

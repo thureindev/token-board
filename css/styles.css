@@ -1,0 +1,85 @@
+.wrapper, .wrapper * {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: inherit;
+}
+
+.wrapper, .wrapper * {
+  width: 100%;
+  height: 100%;
+}
+
+.info {
+  background: DarkGray;
+  box-shadow: 0 0 1px rgba(169, 169, 169, 0.25);
+  color: #fff;
+}
+
+.alert {
+  background: DarkRed;
+  box-shadow: 0 0 1px rgba(139, 0, 0, 0.25);
+  color: #fff;
+}
+
+.success {
+  background: DarkGreen;
+  box-shadow: 0 0 1px rgba(0, 100, 0, 0.25);
+  color: #fff;
+}
+
+.wrapper, .wrapper * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+@media screen and (orientation: portrait) {
+  .wrapper {
+    flex-direction: column-reverse;
+  }
+}
+.split-screen {
+  flex-direction: column;
+}
+.split-screen tr {
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.split-screen th, .split-screen td {
+  height: 10vh;
+  border-bottom: 1px solid black;
+}
+@media screen and (orientation: portrait) {
+  .split-screen th, .split-screen td {
+    height: 7vh;
+  }
+}
+.split-screen th {
+  background-color: gainsboro;
+}
+.split-screen .rowspan-2 {
+  font-size: 1.3em;
+}
+@media screen and (orientation: landscape) {
+  .split-screen .rowspan-2 {
+    height: 20vh;
+  }
+}
+
+.list-view {
+  width: 60vw;
+}
+
+.focus-view {
+  width: 40vw;
+}
+
+@media screen and (orientation: portrait) {
+  .list-view, .focus-view {
+    width: 100vw;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
